@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 struct cust_detail{
     int acc_num;
     int bal;
