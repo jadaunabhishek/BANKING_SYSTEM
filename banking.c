@@ -1,22 +1,25 @@
 #include <stdio.h>
+
 struct cust_detail{
     int acc_num;
     int bal;
     char cust_name[30];
-};
-
-int main(){
-    int i,numofcust,choice,account1,account2,account3,depamount,currentamount1,currentamount2,withdrawamount;
-    printf("Enter number of customer\n");
-    scanf("%d",&numofcust);
-    struct cust_detail s[numofcust];
-    for(i=0;i<numofcust;i++){
+}s[20];
+void customer_detail(int numofcust){
+    struct cust_detail;
+    for(int i=0;i<numofcust;i++){
         printf("Enter %d customer name\n",i+1);
         scanf("%s",s[i].cust_name);
         printf("Enter account number of customer\n");
         scanf("%d",&s[i].acc_num);
         printf("Enter available balance of customer\n");
         scanf("%d",&s[i].bal);}
+}
+int main(){
+    int i,numofcust,choice,account1,account2,account3,depamount,currentamount1,currentamount2,withdrawamount;
+     printf("Enter number of customer\n");
+     scanf("%d",&numofcust);
+    customer_detail(numofcust);
     printf("Enter 1 to deposit money\nEnter 2 to withdraw money\nEnter 3 to search particular customer details\nEnter 4 show all data\n ");
     scanf("%d",&choice);
     switch(choice){
