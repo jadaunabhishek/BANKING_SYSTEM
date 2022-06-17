@@ -33,9 +33,6 @@ int main(){
                 printf("Customer account number is %d\n",s[i].acc_num);
                 currentamount1=s[i].bal+depamount;
                 printf("Amount credited is %d\nCustomer available balance is %d\n",depamount,currentamount1);}
-            else {
-                break;
-            }
             }
             break;
         case 2:
@@ -44,18 +41,17 @@ int main(){
         printf("Enter account number\n");
         scanf("%d",&account2);
         for(i=0;i<numofcust;i++){
-            if(account2==s[i].acc_num){
+            if(s[i].acc_num==account2){
                 if(s[i].bal<withdrawamount){
-                    printf("Insufficient Balance");
+                    printf("Insufficient Balance\n");
                 }
                 else{
                 printf("Customer name is %s\n",s[i].cust_name);
                 printf("Customer account number is %d\n",s[i].acc_num);
                 currentamount2=s[i].bal-withdrawamount;
-                printf("Amount withdrawn is %d\nCustomer available balance is %d\n",withdrawamount,currentamount2);}}
-                else{
-                    break;
+                printf("Amount withdrawn is %d\nCustomer available balance is %d\n",withdrawamount,currentamount2);
                 }
+            }
             }
             break;
         case 3:
